@@ -1,34 +1,37 @@
 {
-    "name": "Grid Overlay",
-    "description": "可変 72px グリッド / 24px ガターをページに重ねて表示します",
-    "version": "1.0.0",
-    "manifest_version": 3,
-    "permissions": [
-        "storage",
-        "scripting"
-    ],
-    "action": {
-        "default_popup": "popup/popup.html",
-        "default_title": "Grid Overlay"
-    },
-    "background": {
-        "service_worker": "service-worker.js",
-        "type": "module"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": [
-                "content-script.js"
-            ],
-            "run_at": "document_idle"
-        }
-    ],
-    "icons": {
-        "16": "icons/16.png",
-        "32": "icons/32.png",
-        "48": "icons/48.png"
+  "name": "カラムグリッドオーバーレイ",
+  "description": "可変 72px グリッド / 24px ガターをページに重ねて表示します",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
+  "author": "Takuya Kitagaki",
+  "github_repository": {
+    "url": "https://github.com/tk-57/12ColumnGridExtensions"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "カラムグリッドオーバーレイ"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_idle"
     }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png"
+  }
 }
